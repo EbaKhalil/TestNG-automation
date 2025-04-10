@@ -22,7 +22,7 @@ public class ExcelReader {
             XSSFSheet sheet = (XSSFSheet) workbook.getSheetAt(0);
             
             int rowCount = ((org.apache.poi.ss.usermodel.Sheet) sheet).getPhysicalNumberOfRows();
-            data = new Object[rowCount - 1][2]; // فقط عمودين: email و password
+            data = new Object[rowCount - 1][2]; 
 
             for (int i = 1; i < rowCount; i++) {
                 Row row = ((org.apache.poi.ss.usermodel.Sheet) sheet).getRow(i);

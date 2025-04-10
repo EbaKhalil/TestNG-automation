@@ -27,30 +27,17 @@ public class LoginTest extends BaseTest {
 
         String expectedMessage = "";
 
-       /* if (!email.contains("@") && password.isEmpty()) {
-            expectedMessage = "Error: Please enter Email Address in a valid format. | Error: Please enter Current Password.";
-        } else if (email.equals("validuser@example.com") && !password.equals("wrongpassword123")) {
-            expectedMessage = "Email/Password you entered is not correct. Please try again.";
-        } else if (email.equals("ebakhalil7@gmail.com") && password.equals("123456789Eba@@")) {
-            expectedMessage = "You May Also Like"; // أو الرسالة اللي فعليًا تظهر بعد تسجيل الدخول
-        }*/
-      /*  if (!email.contains("@") && password.isEmpty()) {
-            expectedMessage = "Error: Please enter Email Address in a valid format. | Error: Please enter Current Password.";
-        } else if (email.equals("validuser@example.com") && password.equals("wrongpassword123")) {
-            expectedMessage = "Email/Password you entered is not correct. Please try again.";
-        } else if (email.equals("ebakhalil7@gmail.com") && password.equals("123456789Eba@@")) {
-            expectedMessage = "You May Also Like"; // أو الرسالة اللي فعليًا تظهر بعد تسجيل الدخول
-        }*/
         if (!email.contains("@") && password.isEmpty()) {
             expectedMessage = "Error: Please enter Email Address in a valid format. | Error: Please enter Current Password.";
         } else if (email.equals("ebakhalil7@gmail.com") && password.equals("123456789Eba@@")) {
-            expectedMessage = "You May Also Like"; // نجاح
+            expectedMessage = "You May Also Like"; 
         } else {
-            expectedMessage = "Email/Password you entered is not correct. Please try again."; // أي محاولة دخول خاطئة
+            expectedMessage = "Email/Password you entered is not correct. Please try again.";   
         }
 
 
         Assert.assertEquals(actualMessage, expectedMessage, "The displayed message does not match the expected result.");
+      
     }
 }
 
